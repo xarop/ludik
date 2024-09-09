@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #000;
+    --secondary: #FFF;
+    --gray: rgba(0, 0, 0, 0.75);
+    --light: rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: "Epilogue", sans-serif;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+
 article>*:not(.entry-content),
 .entry-content>* {
     @apply mx-auto max-w-content;
@@ -44,9 +60,4 @@ article>*:not(.entry-content),
     }
 }
 
-h1 {
-    span {
-        color: red;
-        @apply text-xl;
-    }
-}
+h1 {}

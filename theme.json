@@ -10,22 +10,22 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#0EA5E9"
+          "color": "var(--primary)"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#14B8A6"
+          "color": "var(--secondary)"
         },
         {
           "name": "Dark",
           "slug": "dark",
-          "color": "#1F2937"
+          "color": "var(--dark)"
         },
         {
           "name": "Light",
           "slug": "light",
-          "color": "#F9FAFB"
+          "color": "var(--light)"
         }
       ]
     },
