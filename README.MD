@@ -86,11 +86,15 @@ You could also find the composer's global installation path by running `composer
 * [TailPress website](https://tailpress.io)
 * [Screencasts](https://www.youtube.com/playlist?list=PL6GBdOp044SHIOSCZejodwr1HcYsC43wG)
 * [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+* [Tailwind Animation Documentation](https://www.tailwindcss-animated.com/configurator.html)
 * [Laravel Mix Documentation](https://laravel-mix.com)
 * [Esbuild Documentation](https://esbuild.github.io)
+* [Instagram widget](https://snapwidget.com/social-wall)
+  
 
 ## Contributors
 
+* [xarop.com](https://github.com/xarop)
 * [Jeffrey van Rossum](https://github.com/jeffreyvr)
 * [All contributors](https://github.com/jeffreyvr/tailpress/graphs/contributors)
 

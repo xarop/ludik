@@ -72,18 +72,24 @@
 
 		<div id="content" class="site-content flex-grow">
 
-			<?php if (is_front_page()) { ?>
+			<?php if (is_front_page()) : ?>
 				<!-- Start introduction -->
 				<div class="container mx-auto">
-					<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
+					<section class="hero">
 						<div class="mx-auto max-w-screen-md">
-							<h2 class="text-6xl font-bold mb-10 animate-fade-down">enjoy...</h2>
-							<h3 class="text-4xl mb-5 animate-flip-up animate-delay-500">with us</h3>
-							<p class="animate-fade animate-delay-1000">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+							<h2 class="text-6xl font-bold mb-10 animate-fade-down"><?php the_title(); ?></h2>
+							<?php the_content(); ?>
 						</div>
-					</div>
+					</section>
+
+					<section>
+						<!-- SnapWidget -->
+						<h2>Nuestro día a día como ilustradoras</h2>
+						<script src="https://snapwidget.com/js/snapwidget.js"></script>
+						<iframe src="https://snapwidget.com/embed/1078776" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; " title="Posts from Instagram"></iframe>
+					</section>
 					<!-- End introduction -->
-				<?php } ?>
+				<?php endif; ?>
 
 				<?php do_action('tailpress_content_start'); ?>
 
