@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto my-8">
+<main class="container mx-auto my-8">
 
 	<?php if (have_posts() && ! is_front_page()) : ?>
 		<?php
@@ -14,7 +14,7 @@
 
 	<?php endif; ?>
 
-</div>
+</main>
 
 <?php
 get_footer();

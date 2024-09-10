@@ -1,3 +1,15 @@
+<?php
+$link = get_field('cta', 'option');
+$cta = array();
+if ($link) {
+	$url = esc_url($link['url']);
+	$title = esc_html($link['title']);
+	$target = esc_attr($link['target']) ? esc_attr($link['target']) : '_self';
+	$cta = '<a href="' . $url . '" target="' . $target . '" class="btn">' . $title . '</a>';
+}
+?>
+
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -19,8 +31,7 @@
 		<?php do_action('tailpress_header'); ?>
 
 		<header>
-
-			<div class="mx-auto container">
+			<nav class="mx-auto container">
 				<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
 					<div class="flex justify-between items-center">
 						<div class="flex items-center">
@@ -67,7 +78,7 @@
 					);
 					?>
 				</div>
-			</div>
+			</nav>
 		</header>
 
 		<div id="content" class="site-content flex-grow">
@@ -84,13 +95,16 @@
 
 					<section>
 						<!-- SnapWidget -->
-						<h2>Nuestro día a día como ilustradoras</h2>
+						<h2><?php the_field('title', 'option'); ?></h2>
 						<script src="https://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="https://snapwidget.com/embed/1078776" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; " title="Posts from Instagram"></iframe>
+						<iframe src="<?php the_field('snapwidget', 'option'); ?>" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; " title="<?php the_field('title', 'option'); ?>"></iframe>
+						<?php echo $cta; ?>
 					</section>
 					<!-- End introduction -->
-				<?php endif; ?>
 
-				<?php do_action('tailpress_content_start'); ?>
+				</div>
+			<?php endif; ?>
 
-				<main>
+			<?php do_action('tailpress_content_start');	?>
+
+		</div>
