@@ -1,15 +1,20 @@
+.hero h2 {
+    @apply animate-jump-in animate-delay-100;
+}
+
+
+.home-content {
+    @apply animate-flip-down animate-delay-500;
+}
+
+/* 
 p {
     @apply animate-fade animate-delay-1000;
 }
 
-h2 {
-    @apply animate-jump-in animate-delay-100;
-}
 
-.h1 {
-    @apply animate-flip-up animate-delay-500;
-}
 
 section {
     @apply animate-flip-up animate-delay-1000;
-}
+} 
+    */
