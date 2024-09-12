@@ -1,4 +1,5 @@
 <?php
+$shortcode = get_field('shortcode', 'option');
 $link = get_field('cta', 'option');
 $cta = array();
 if ($link) {
@@ -7,6 +8,19 @@ if ($link) {
 	$target = esc_attr($link['target']) ? esc_attr($link['target']) : '_self';
 	$cta = '<a href="' . $url . '" target="' . $target . '" class="btn">' . $title . '</a>';
 }
+
+
+// Get the content of the page
+the_post();
+$content = get_the_content();
+if (is_front_page()) :
+	// Replace <h1> with <div class="h1"> and </h1> with </div>
+	$content = str_replace('<h1>', '<div class="h1">', $content);
+	$content = str_replace('</h1>', '</div>', $content);
+endif;
+
+$background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+
 ?>
 
 
@@ -26,85 +40,67 @@ if ($link) {
 
 	<?php do_action('tailpress_site_before'); ?>
 
-	<div id="page" class="min-h-screen flex flex-col">
-
-		<?php do_action('tailpress_header'); ?>
-
-		<header>
-			<nav class="mx-auto container">
-				<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-					<div class="flex justify-between items-center">
-						<div class="flex items-center">
-							<?php if (has_custom_logo()) { ?>
-								<?php the_custom_logo(); ?>
-							<?php } else { ?>
-								<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-									<?php echo get_bloginfo('name'); ?>
-								</a>
-							<?php } ?>
 
 
-							<?php
-							if (is_front_page()) echo '<h1 class="hidden lg:block ml-5">' . get_bloginfo('description') . '</h1>';
-							else echo '<span class="hidden lg:block ml-5">' . get_bloginfo('description') . '</span>';
-							?>
-						</div>
+	<?php do_action('tailpress_header'); ?>
 
-						<div class="lg:hidden">
-							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-								<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
-									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-										<g id="icon-shape">
-											<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
-												id="Combined-Shape"></path>
-										</g>
-									</g>
-								</svg>
+	<header>
+		<div class="mx-auto container">
+			<div class="flex justify-between items-center py-6">
+				<div class="site-logo z-50 flex justify-between items-center">
+					<div class="flex items-center">
+						<?php if (has_custom_logo()) { ?>
+							<?php the_custom_logo(); ?>
+						<?php } else { ?>
+							<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
+								<?php echo get_bloginfo('name'); ?>
 							</a>
-						</div>
+						<?php } ?>
+
+
+						<?php
+						if (is_front_page()) echo '<h1 class="hidden lg:block ml-5 italic">' . get_bloginfo('description') . '</h1>';
+						else echo '<span class="hidden lg:block ml-5 italic">' . get_bloginfo('description') . '</span>';
+						?>
 					</div>
 
-					<?php
-					wp_nav_menu(
-						array(
-							'container_id'    => 'primary-menu',
-							'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-							'menu_class'      => 'lg:flex lg:-mx-4',
-							'theme_location'  => 'primary',
-							'li_class'        => 'lg:mx-4',
-							'fallback_cb'     => false,
-						)
-					);
-					?>
-				</div>
-			</nav>
-		</header>
-
-		<div id="content" class="site-content flex-grow">
-
-			<?php if (is_front_page()) : ?>
-				<!-- Start introduction -->
-				<div class="container mx-auto">
-					<section class="hero">
-						<div class="mx-auto max-w-screen-md">
-							<h2 class="text-6xl font-bold mb-10 animate-fade-down"><?php the_title(); ?></h2>
-							<?php the_content(); ?>
-						</div>
-					</section>
-
-					<section>
-						<!-- SnapWidget -->
-						<h2><?php the_field('title', 'option'); ?></h2>
-						<script src="https://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="<?php the_field('snapwidget', 'option'); ?>" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; " title="<?php the_field('title', 'option'); ?>"></iframe>
-						<?php echo $cta; ?>
-					</section>
-					<!-- End introduction -->
 
 				</div>
+
+				<?php get_template_part('template-parts/menu'); ?>
+
+
+
+			</div>
+		</div>
+	</header>
+
+
+	<?php if (is_front_page()) : ?>
+		<!-- Start introduction -->
+		<div class="container mx-auto">
+
+			<div class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
+				<h2><?php the_title(); ?></h2>
+			</div>
+
+			<section class="home-content">
+				<article>
+					<?php echo apply_filters('the_content', $content); ?>
+				</article>
+			</section>
+
+
+			<?php if ($shortcode): ?>
+				<section class="gallery">
+					<!-- Gallery -->
+					<h2><?php the_field('title', 'option'); ?></h2>
+					<?php echo do_shortcode($shortcode); ?>
+					<div class="py-10 text-center"><?php echo $cta; ?></div>
+				</section>
 			<?php endif; ?>
 
-			<?php do_action('tailpress_content_start');	?>
-
 		</div>
+	<?php endif; ?>
+
+	<?php do_action('tailpress_content_start');	?>

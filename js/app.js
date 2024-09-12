@@ -9,10 +9,10 @@
 
 // Navigation toggle
 window.addEventListener('load', function () {
-  var main_navigation = document.querySelector('#primary-menu');
+  var body = document.querySelector('body');
   document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
     e.preventDefault();
-    main_navigation.classList.toggle('hidden');
+    body.classList.toggle('menu-open');
   });
 });
 

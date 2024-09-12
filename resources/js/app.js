@@ -1,8 +1,8 @@
 // Navigation toggle
 window.addEventListener('load', function () {
-      let main_navigation = document.querySelector('#primary-menu');
+      let body = document.querySelector('body');
       document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
             e.preventDefault();
-            main_navigation.classList.toggle('hidden');
+            body.classList.toggle('menu-open');
       });
 });
