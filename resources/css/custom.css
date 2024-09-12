@@ -121,9 +121,9 @@ header {
 }
 
 
-/* icons*/
 
-/* Base Styles for Hamburger Menu */
+
+/* Hamburger Menu */
 .hamburger {
     display: flex;
     align-items: center;
@@ -144,9 +144,8 @@ header {
 }
 
 
-
 /* Animation for Menu Open State */
-body.menu-open .hamburger svg #icon-shape {
+.menu-open .hamburger svg #icon-shape {
     path:nth-child(1) {
         transform: translateX(-4px) translateY(4px) rotate(45deg);
     }
@@ -163,7 +162,7 @@ body.menu-open .hamburger svg #icon-shape {
 
 
 
-
+/* icons*/
 .icon {
     width: 26px;
     height: 26px;

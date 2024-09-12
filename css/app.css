@@ -755,7 +755,7 @@ video {
         color: #FFF;
         text-shadow: 4px 4px 0px #000;
         font-weight: 700;
-    }/* icons*//* Base Styles for Hamburger Menu */.hamburger {
+    }/* Hamburger Menu */.hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -768,13 +768,13 @@ video {
     }.hamburger svg #icon-shape path {
             transition: transform 0.3s ease, opacity 0.2s ease;
             transform-origin: center;
-        }/* Animation for Menu Open State */body.menu-open .hamburger svg #icon-shape path:nth-child(1) {
+        }/* Animation for Menu Open State */.menu-open .hamburger svg #icon-shape path:nth-child(1) {
         transform: translateX(-4px) translateY(4px) rotate(45deg);
-    }body.menu-open .hamburger svg #icon-shape path:nth-child(2) {
+    }.menu-open .hamburger svg #icon-shape path:nth-child(2) {
         opacity: 0;
-    }body.menu-open .hamburger svg #icon-shape path:nth-child(3) {
+    }.menu-open .hamburger svg #icon-shape path:nth-child(3) {
         transform: translateX(-4px) translateY(-4px) rotate(-45deg);
-    }.icon {
+    }/* icons*/.icon {
     width: 26px;
     height: 26px;
     display: inline-block;
