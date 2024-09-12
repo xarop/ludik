@@ -81,8 +81,11 @@ header {
 }
 
 .menu-open {
+    overflow: hidden;
+
     header {
-        @apply right-0 top-0 z-50 fixed w-full;
+        @apply right-0 top-0 z-50 fixed w-full h-full;
+        background-color: var(--gray);
 
         .menu {
             @apply block right-0 top-0 py-32;
@@ -119,6 +122,48 @@ header {
 
 
 /* icons*/
+
+/* Base Styles for Hamburger Menu */
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+
+    svg {
+        transition: transform 0.3s ease;
+
+        #icon-shape path {
+            transition: transform 0.3s ease, opacity 0.2s ease;
+            transform-origin: center;
+        }
+    }
+}
+
+
+
+/* Animation for Menu Open State */
+body.menu-open .hamburger svg #icon-shape {
+    path:nth-child(1) {
+        transform: translateX(-4px) translateY(4px) rotate(45deg);
+    }
+
+    path:nth-child(2) {
+        opacity: 0;
+    }
+
+    path:nth-child(3) {
+        transform: translateX(-4px) translateY(-4px) rotate(-45deg);
+    }
+}
+
+
+
+
+
 .icon {
     width: 26px;
     height: 26px;

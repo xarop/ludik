@@ -438,6 +438,8 @@ video {
   max-width: 1280px;
 }.max-w-sm{
   max-width: 24rem;
+}.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }@keyframes fade{0%{
     opacity: 0;
   }100%{
@@ -473,6 +475,8 @@ video {
   justify-content: space-between;
 }.rounded{
   border-radius: 0.25rem;
+}.border{
+  border-width: 1px;
 }.border-2{
   border-width: 2px;
 }.border-b{
@@ -571,6 +575,8 @@ video {
 }.antialiased{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}.outline{
+  outline-style: solid;
 }.transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -697,12 +703,18 @@ video {
 }@media (min-width: 960px){.hamburger{
     display: none;
   }
+}.menu-open {
+    overflow: hidden;
+
+
 }.menu-open header{
   position: fixed;
   right: 0px;
   top: 0px;
   z-index: 50;
+  height: 100%;
   width: 100%;
+        background-color: var(--gray);
 }.menu-open header .menu{
   right: 0px;
   top: 0px;
@@ -743,7 +755,26 @@ video {
         color: #FFF;
         text-shadow: 4px 4px 0px #000;
         font-weight: 700;
-    }/* icons*/.icon {
+    }/* icons*//* Base Styles for Hamburger Menu */.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}.hamburger svg {
+        transition: transform 0.3s ease;
+    }.hamburger svg #icon-shape path {
+            transition: transform 0.3s ease, opacity 0.2s ease;
+            transform-origin: center;
+        }/* Animation for Menu Open State */body.menu-open .hamburger svg #icon-shape path:nth-child(1) {
+        transform: translateX(-4px) translateY(4px) rotate(45deg);
+    }body.menu-open .hamburger svg #icon-shape path:nth-child(2) {
+        opacity: 0;
+    }body.menu-open .hamburger svg #icon-shape path:nth-child(3) {
+        transform: translateX(-4px) translateY(-4px) rotate(-45deg);
+    }.icon {
     width: 26px;
     height: 26px;
     display: inline-block;
