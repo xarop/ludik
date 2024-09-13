@@ -31,7 +31,7 @@ module.exports = {
             'md': '782px',
             'lg': tailpress.theme('settings.layout.contentSize', theme),
             'xl': tailpress.theme('settings.layout.wideSize', theme),
-            '2xl': '1440px'
+            '2xl': '1600px'
         }
     },
     plugins: [

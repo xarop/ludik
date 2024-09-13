@@ -8,7 +8,7 @@
 	<?php do_action('tailpress_footer'); ?>
 
 	<?php if (have_rows('contact', 'option')):  ?>
-		<ul class="flex w-full justify-between bg-black text-white p-10">
+		<ul class="flex flex-col lg:flex-row gap-5 w-full justify-between bg-black text-white p-10">
 			<?php
 			while (have_rows('contact', 'option')): the_row();
 				$name = get_sub_field('name');
@@ -16,7 +16,7 @@
 				$tel = get_sub_field('tel');
 			?>
 				<li class="flex items-center gap-2">
-					<span><?php echo esc_attr($name); ?></span>
+					<?php if (esc_attr($name)) echo '<span>' . esc_attr($name) . '</span>'; ?>
 					<a href="mailto:<?php echo esc_url($email); ?>" target="_blank" title="<?php echo esc_attr($email); ?>"><?php echo esc_attr($email); ?></a>
 					<a href="tel:<?php echo esc_url($tel); ?>" target="_blank" title="<?php echo esc_attr($tel); ?>"><?php echo esc_attr($tel); ?></a>
 				</li>
