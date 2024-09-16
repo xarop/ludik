@@ -1,5 +1,5 @@
 const theme = require('./theme.json');
-const ludik = require("@jeffreyvr/tailwindcss-ludik");
+const ludik = require("@jeffreyvr/tailwindcss-tailpress");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

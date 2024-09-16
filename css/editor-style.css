@@ -118,8 +118,8 @@
 .w-full {
     width: 100%
 }
-.max-w-screen-sm {
-    max-width: 600px
+.max-w-screen-lg {
+    max-width: 960px
 }
 .max-w-screen-xl {
     max-width: 1680px

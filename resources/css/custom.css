@@ -52,7 +52,7 @@ section {
     box-shadow: 0px 0px 2px 0px var(--light) inset;
 
     h2 {
-        @apply text-xl font-bold my-8 text-center;
+        @apply text-xl font-bold;
     }
 }
 
@@ -61,7 +61,7 @@ section {
 }
 
 article {
-    @apply py-10 max-w-screen-sm mx-auto;
+    /* @apply py-10 max-w-screen-lg mx-auto; */
 }
 
 .menu {

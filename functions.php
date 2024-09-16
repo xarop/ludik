@@ -120,7 +120,7 @@ add_filter('nav_menu_submenu_css_class', 'ludik_nav_menu_add_submenu_class', 10,
 
 function ludik_time()
 {
-	//if (get_post_type() == 'post') {
-	echo '<time datetime="' . get_the_date('c') . '" itemprop="datePublished" class="text-sm text-gray-700">' . get_the_date() . '</time>';
-	//}
+	if (get_post_type() == 'post') {
+		echo '<time datetime="' . get_the_date('c') . '" itemprop="datePublished" class="text-sm text-gray-700">' . get_the_date() . '</time>';
+	}
 }

@@ -54,14 +54,14 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
 
     <main class="container mx-auto">
-        <header class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
+        <!-- <header class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
             <h1><?php the_title(); ?></h1>
-        </header>
+        </header> -->
 
         <section>
-
             <?php get_template_part('template-parts/content', get_post_format()); ?>
         </section>
+
     </main>
 
 <?php endif; ?>

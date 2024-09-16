@@ -2,12 +2,12 @@
     @apply animate-jump-in animate-delay-100;
 }
 
-
+/* 
 .home-content {
     @apply animate-flip-down animate-delay-500;
 }
 
-/* 
+
 p {
     @apply animate-fade animate-delay-1000;
 }
