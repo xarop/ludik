@@ -3,14 +3,14 @@
 /**
  * Theme setup.
  */
-function tailpress_setup()
+function ludik_setup()
 {
 	add_theme_support('title-tag');
 
 	register_nav_menus(
 		array(
-			'primary' => __('Primary Menu', 'tailpress'),
-			'footer' => __('Footer Menu', 'tailpress'),
+			'primary' => __('Primary Menu', 'ludik'),
+			'footer' => __('Footer Menu', 'ludik'),
 		)
 	);
 
@@ -37,20 +37,20 @@ function tailpress_setup()
 	add_editor_style('css/editor-style.css');
 }
 
-add_action('after_setup_theme', 'tailpress_setup');
+add_action('after_setup_theme', 'ludik_setup');
 
 /**
  * Enqueue theme assets.
  */
-function tailpress_enqueue_scripts()
+function ludik_enqueue_scripts()
 {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style('tailpress', tailpress_asset('css/app.css'), array(), $theme->get('Version'));
-	wp_enqueue_script('tailpress', tailpress_asset('js/app.js'), array(), $theme->get('Version'));
+	wp_enqueue_style('ludik', ludik_asset('css/app.css'), array(), $theme->get('Version'));
+	wp_enqueue_script('ludik', ludik_asset('js/app.js'), array(), $theme->get('Version'));
 }
 
-add_action('wp_enqueue_scripts', 'tailpress_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'ludik_enqueue_scripts');
 
 /**
  * Get asset path.
@@ -59,7 +59,7 @@ add_action('wp_enqueue_scripts', 'tailpress_enqueue_scripts');
  *
  * @return string
  */
-function tailpress_asset($path)
+function ludik_asset($path)
 {
 	if (wp_get_environment_type() === 'production') {
 		return get_stylesheet_directory_uri() . '/' . $path;
@@ -77,7 +77,7 @@ function tailpress_asset($path)
  *
  * @return array
  */
-function tailpress_nav_menu_add_li_class($classes, $item, $args, $depth)
+function ludik_nav_menu_add_li_class($classes, $item, $args, $depth)
 {
 	if (isset($args->li_class)) {
 		$classes[] = $args->li_class;
@@ -90,7 +90,7 @@ function tailpress_nav_menu_add_li_class($classes, $item, $args, $depth)
 	return $classes;
 }
 
-add_filter('nav_menu_css_class', 'tailpress_nav_menu_add_li_class', 10, 4);
+add_filter('nav_menu_css_class', 'ludik_nav_menu_add_li_class', 10, 4);
 
 /**
  * Adds option 'submenu_class' to 'wp_nav_menu'.
@@ -101,7 +101,7 @@ add_filter('nav_menu_css_class', 'tailpress_nav_menu_add_li_class', 10, 4);
  *
  * @return array
  */
-function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
+function ludik_nav_menu_add_submenu_class($classes, $args, $depth)
 {
 	if (isset($args->submenu_class)) {
 		$classes[] = $args->submenu_class;
@@ -114,4 +114,4 @@ function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
 	return $classes;
 }
 
-add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3);
+add_filter('nav_menu_submenu_css_class', 'ludik_nav_menu_add_submenu_class', 10, 3);

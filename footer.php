@@ -1,11 +1,11 @@
-<?php do_action('tailpress_content_end'); ?>
+<?php do_action('ludik_content_end'); ?>
 
 
 
-<?php do_action('tailpress_content_after'); ?>
+<?php do_action('ludik_content_after'); ?>
 
 <footer id="colophon" class="site-footer container" role="contentinfo">
-	<?php do_action('tailpress_footer'); ?>
+	<?php do_action('ludik_footer'); ?>
 
 	<?php if (have_rows('contact', 'option')):  ?>
 		<ul class="flex flex-col lg:flex-row gap-5 w-full justify-between bg-black text-white p-10">

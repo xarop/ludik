@@ -12,11 +12,11 @@
 
 <body <?php body_class(); ?>>
 
-	<?php do_action('tailpress_site_before'); ?>
+	<?php do_action('ludik_site_before'); ?>
 
 
 
-	<?php do_action('tailpress_header'); ?>
+	<?php do_action('ludik_header'); ?>
 
 	<header class="site-header">
 		<div class="mx-auto container">
@@ -49,4 +49,4 @@
 		</div>
 	</header>
 
-	<?php do_action('tailpress_content_start');	?>
+	<?php do_action('ludik_content_start');	?>

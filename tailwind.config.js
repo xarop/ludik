@@ -1,5 +1,5 @@
 const theme = require('./theme.json');
-const tailpress = require("@jeffreyvr/tailwindcss-tailpress");
+const ludik = require("@jeffreyvr/tailwindcss-ludik");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -22,20 +22,20 @@ module.exports = {
             },
         },
         extend: {
-            colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
-            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme))
+            colors: ludik.colorMapper(ludik.theme('settings.color.palette', theme)),
+            fontSize: ludik.fontSizeMapper(ludik.theme('settings.typography.fontSizes', theme))
         },
         screens: {
             'xs': '480px',
             'sm': '600px',
             'md': '782px',
-            'lg': tailpress.theme('settings.layout.contentSize', theme),
-            'xl': tailpress.theme('settings.layout.wideSize', theme),
+            'lg': ludik.theme('settings.layout.contentSize', theme),
+            'xl': ludik.theme('settings.layout.wideSize', theme),
             '2xl': '1600px'
         }
     },
     plugins: [
-        tailpress.tailwind,
+        ludik.tailwind,
         require('tailwindcss-animated')
     ]
 };
