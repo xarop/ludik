@@ -6,7 +6,7 @@ if ($link) {
     $url = esc_url($link['url']);
     $title = esc_html($link['title']);
     $target = esc_attr($link['target']) ? esc_attr($link['target']) : '_self';
-    $cta = '<a href="' . $url . '" target="' . $target . '" class="btn">' . $title . '</a>';
+    $cta = '<a href="' . $url . '" target="' . $target . '" class="btn mx-auto my-10">' . $title . '</a>';
 }
 
 
@@ -43,9 +43,9 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
         <?php if ($shortcode): ?>
             <section class="gallery">
                 <!-- Gallery -->
-                <h2><?php the_field('title', 'option'); ?></h2>
+                <h3 class="text-center"><?php echo $title ?></h3>
                 <?php echo do_shortcode($shortcode); ?>
-                <div class="py-10 text-center"><?php echo $cta; ?></div>
+                <?php echo $cta; ?>
             </section>
         <?php endif; ?>
 

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    @apply text-base font-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    line-height: 140%;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+p {
+    line-height: 170%;
+    margin: 0;
+}
+
+pre,
+.pre {
+    @apply text-base uppercase font-sans;
+}

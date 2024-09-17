@@ -1,11 +1,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "variables.css";
+@import "typography.css";
 
 body {
     @apply font-sans;
 }
 
-.wp-block{
+.wp-block {
     @apply max-w-screen-xl;
 }
 

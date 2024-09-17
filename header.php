@@ -33,8 +33,8 @@
 
 
 						<?php
-						if (is_front_page()) echo '<h1 class="hidden lg:block ml-5 italic">' . get_bloginfo('description') . '</h1>';
-						else echo '<span class="hidden lg:block ml-5 italic">' . get_bloginfo('description') . '</span>';
+						if (is_front_page()) echo '<h1>' . get_bloginfo('description') . '</h1>';
+						else echo '<pre>' . get_bloginfo('description') . '</pre>';
 						?>
 					</div>
 

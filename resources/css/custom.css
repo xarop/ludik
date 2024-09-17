@@ -1,60 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-    --primary: #000;
-    --secondary: #FFF;
-    --gray: rgba(0, 0, 0, 0.75);
-    --light: rgba(0, 0, 0, 0.25);
-    --lighter: #f5f5f5;
-    --marker: #00ffff;
-}
-
-body {
-    font-family: "Epilogue", sans-serif;
-
-    background-color: var(--secondary);
-    color: var(--primary);
-    background-color: var(--lighter);
-}
-
-main {
-
-    h1,
-    .h1 {
-        @apply text-6xl font-bold mb-5;
-    }
-}
+main {}
 
 a:not(.btn) {
-    text-shadow: 1px 1px 0 rgba(var(--marker), 0.8);
+    text-shadow: 1px 1px 0 rgba(var(--hover), 0.8);
     transition: all .5s ease-in-out;
     font-weight: 500;
 
     &:hover {
-        text-shadow: .2rem .2rem .2rem var(--marker);
+        text-shadow: .2rem .2rem .2rem var(--hover);
     }
 }
 
 .current_page_parent,
 .current_page_item {
     a {
-        text-shadow: .2rem .2rem .2rem var(--marker);
+        text-shadow: .2rem .2rem .2rem var(--hover);
     }
 }
 
 
-p {
-    line-height: 170%;
-}
 
-section {
-    @apply p-5 bg-white;
-    box-shadow: 0px 0px 2px 0px var(--light) inset;
-
-    h2 {
-        @apply text-xl font-bold;
-    }
-}
+section {}
 
 .container {
     @apply mx-auto max-w-screen-xl px-5;
@@ -64,16 +29,24 @@ article {
     /* @apply py-10 max-w-screen-lg mx-auto; */
 }
 
+
 .menu {
     @apply lg:flex;
 }
 
 .site-header {
+
+    h1,
+    pre {
+        @apply pre hidden lg:block ml-5;
+        color: var(--gray5);
+    }
+
     .menu {
         @apply hidden absolute right-[-100vw] w-full p-10 text-2xl;
         @apply lg:flex lg:relative lg:-mx-4 lg:right-0 lg:p-0 lg:text-lg;
         margin: 0 !important;
-        background-color: var(--lighter);
+
 
         .menu-item {
             @apply py-4;
@@ -95,10 +68,10 @@ article {
 
     .site-header {
         @apply z-50 relative w-full h-full;
-        background-color: var(--gray);
 
         .menu {
             @apply block right-0 top-0 py-32;
+            background-color: var(--bg);
         }
     }
 
@@ -107,11 +80,19 @@ article {
 
 
 .btn {
-    @apply font-normal py-3 px-6 border-2 border-black hover:bg-black hover:text-white;
+    display: block;
+    max-width: var(--4xl);
     font-weight: 500;
+    text-align: center;
+    color: var(--black);
+    padding: var(--md) var(--lg);
+    border-width: 1px 2px 2px 1px;
+    border-color: currentColor;
 
     &:hover {
-        box-shadow: 6px 6px var(--marker);
+        color: var(--white);
+        background-color: var(--black);
+        box-shadow: var(--hovershadow);
     }
 }
 

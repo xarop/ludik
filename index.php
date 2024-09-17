@@ -20,7 +20,7 @@ get_header();
 			<h1><?php echo $title; ?></h1>
 		</div>
 		<div>
-			<h2><?php echo $resume; ?></h2>
+			<?php echo $resume; ?>
 			<?php echo $content; ?>
 		</div>
 	</header>
