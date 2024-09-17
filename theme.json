@@ -10,22 +10,27 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "var(--primary)"
+          "color": "#000"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "var(--secondary)"
+          "color": "#FFF"
         },
         {
-          "name": "Dark",
-          "slug": "dark",
-          "color": "var(--dark)"
+          "name": "Gray",
+          "slug": "gray",
+          "color": "rgba(0, 0, 0, 0.75)"
         },
         {
           "name": "Light",
           "slug": "light",
-          "color": "var(--light)"
+          "color": "rgba(0, 0, 0, 0.25)"
+        },
+        {
+          "name": "Marker",
+          "slug": "marker",
+          "color": "#00ffff"
         }
       ]
     },
