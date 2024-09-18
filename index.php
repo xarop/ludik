@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<main class="container">
+<main>
 
 	<header class="grid lg:grid-cols-2 w-full py-10">
 		<div>

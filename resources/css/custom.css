@@ -1,19 +1,21 @@
-main {}
+main {
+    @apply container mx-auto;
+}
 
 a:not(.btn) {
-    text-shadow: 1px 1px 0 rgba(var(--hover), 0.8);
+    text-shadow: 1px 1px 0 rgba(var(--marker), 0.8);
     transition: all .5s ease-in-out;
     font-weight: 500;
 
     &:hover {
-        text-shadow: .2rem .2rem .2rem var(--hover);
+        text-shadow: .2rem .2rem .2rem var(--marker);
     }
 }
 
 .current_page_parent,
 .current_page_item {
     a {
-        text-shadow: .2rem .2rem .2rem var(--hover);
+        text-shadow: .2rem .2rem .2rem var(--marker);
     }
 }
 
@@ -23,6 +25,13 @@ section {}
 
 .container {
     @apply mx-auto max-w-screen-xl px-5;
+}
+
+
+.content,
+[class$="-content"] {
+    @apply lg:p-xxxxl p-xl;
+
 }
 
 article {
@@ -46,7 +55,6 @@ article {
         @apply hidden absolute right-[-100vw] w-full p-10 text-2xl;
         @apply lg:flex lg:relative lg:-mx-4 lg:right-0 lg:p-0 lg:text-lg;
         margin: 0 !important;
-
 
         .menu-item {
             @apply py-4;
@@ -84,15 +92,15 @@ article {
     max-width: var(--4xl);
     font-weight: 500;
     text-align: center;
-    color: var(--black);
+    color: var(--primary);
     padding: var(--md) var(--lg);
     border-width: 1px 2px 2px 1px;
     border-color: currentColor;
 
     &:hover {
-        color: var(--white);
-        background-color: var(--black);
-        box-shadow: var(--hovershadow);
+        color: var(--secondary);
+        background-color: var(--primary);
+        box-shadow: var(--markershadow);
     }
 }
 
@@ -106,7 +114,15 @@ article {
 /* Hero */
 .hero {
 
-    @apply bg-cover bg-center flex items-center justify-center text-white py-20;
+    @apply bg-cover bg-center flex flex-col items-center justify-center text-white;
+
+    &-header {
+        @apply lg:h-hero flex justify-center items-center;
+    }
+
+    &-content {
+        @apply text-center;
+    }
 
     h1,
     h2 {
@@ -115,9 +131,13 @@ article {
         text-shadow: 4px 4px 0px #000;
         font-weight: 700;
     }
+
+    article {
+        color: var(--primary);
+        background-color: var(--gray6);
+    }
+
 }
-
-
 
 
 /* Hamburger Menu */

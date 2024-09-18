@@ -23,7 +23,14 @@ module.exports = {
         },
         extend: {
             colors: ludik.colorMapper(ludik.theme('settings.color.palette', theme)),
-            fontSize: ludik.fontSizeMapper(ludik.theme('settings.typography.fontSizes', theme))
+            fontSize: ludik.fontSizeMapper(ludik.theme('settings.typography.fontSizes', theme)),
+            spacing: {
+                hero: '480px',
+                xl: '32px',
+                xxl: '48px',
+                xxxl: '64px',
+                xxxxl: '84px'
+            },
         },
         screens: {
             'xs': '480px',

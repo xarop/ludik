@@ -7,6 +7,10 @@ body {
     @apply font-sans;
 }
 
+.editor-styles-wrapper {
+    @apply p-10;
+}
+
 .wp-block {
     @apply max-w-screen-xl;
 }

@@ -3,7 +3,7 @@
   "settings": {
     "layout": {
       "contentSize": "960px",
-      "wideSize": "1680px"
+      "wideSize": "1280px"
     },
     "color": {
       "palette": [
@@ -20,12 +20,27 @@
         {
           "name": "Gray",
           "slug": "gray",
-          "color": "rgba(0, 0, 0, 0.75)"
+          "color": "rgba(0, 0, 0, 0.60)"
         },
         {
-          "name": "Light",
-          "slug": "light",
-          "color": "rgba(0, 0, 0, 0.25)"
+          "name": "Gray4",
+          "slug": "gray",
+          "color": "rgba(0, 0, 0, 0.40)"
+        },
+        {
+          "name": "Gray5",
+          "slug": "gray5",
+          "color": "rgba(0, 0, 0, 0.50)"
+        },
+        {
+          "name": "Gray6",
+          "slug": "gray6",
+          "color": "rgba(255, 255, 255, 0.60)"
+        },
+        {
+          "name": "Gray9",
+          "slug": "gray9",
+          "color": "rgba(255, 255, 255, 0.95)"
         },
         {
           "name": "Marker",
@@ -39,32 +54,32 @@
         {
           "name": "Small",
           "slug": "small",
-          "size": "0.875rem"
+          "size": "16px"
         },
         {
           "slug": "regular",
           "name": "Regular",
-          "size": "1.5rem"
+          "size": "20px"
         },
         {
           "slug": "large",
           "name": "Large",
-          "size": "1.125rem"
+          "size": "24px"
         },
         {
           "slug": "xl",
           "name": "XL",
-          "size": "1.25rem"
+          "size": "32px"
         },
         {
           "slug": "xxl",
           "name": "2XL",
-          "size": "1.5rem"
+          "size": "48px"
         },
         {
           "slug": "xxxl",
           "name": "3XL",
-          "size": "1.875rem"
+          "size": "64px"
         }
       ]
     }
