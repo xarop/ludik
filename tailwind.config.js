@@ -57,6 +57,7 @@ module.exports = {
                 xxl: '48px',
                 xxxl: '64px',
                 xxxxl: '84px',
+                form: '200px',
                 hero: '480px'
             },
         },

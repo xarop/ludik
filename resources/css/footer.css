@@ -6,7 +6,6 @@
     @apply bg-gray4 text-secondary;
 
     a:hover {
-        text-shadow: none;
         @apply text-primary;
     }
 }

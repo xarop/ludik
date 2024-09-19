@@ -20,7 +20,7 @@
 
 	<header class="site-header">
 		<div class="container">
-			<nav>
+			<nav class="flex-row">
 				<div class="site-logo z-50 flex justify-between items-center">
 					<div class="flex items-center">
 						<?php if (has_custom_logo()) { ?>

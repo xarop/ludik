@@ -5,6 +5,8 @@ else  $index = get_option('page_for_posts');
 $pretitle = get_field('pretitle', $index);
 $title = get_field('title', $index);
 $resume = get_field('resume', $index);
+$content = get_the_content();
+$image = get_field('image', $index);
 $image = get_field('image', $index);
 
 $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -43,7 +45,7 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
             <div class="p-lg lg:p-xxxxl z-20">
                 <?php if ($image) echo '<pre>' . $pretitle . '</pre>'; ?>
                 <?php if ($image) echo '<h1>' . $title . '</h1>'; ?>
-                <?php echo $resume; ?>
+                <div class="text-gray"><?php echo $resume; ?></div>
             </div>
     </header>
 

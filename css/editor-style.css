@@ -60,6 +60,8 @@
     margin-bottom: 2rem;
 }.mb-xxl{
     margin-bottom: 48px;
+}.mb-sm{
+    margin-bottom: 12px;
 }.block{
     display: block;
 }.inline-block{
@@ -76,6 +78,8 @@
     height: 1.5rem;
 }.h-full{
     height: 100%;
+}.max-h-form{
+    max-height: 200px;
 }.min-h-screen{
     min-height: 100vh;
 }.w-16{
@@ -92,10 +96,8 @@
     max-width: 1300px;
 }.max-w-sm{
     max-width: 24rem;
-}.max-w-screen-xs{
-    max-width: 480px;
-}.max-w-screen-sm{
-    max-width: 600px;
+}.max-w-full{
+    max-width: 100%;
 }.transform{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }@keyframes fade{0%{
@@ -134,16 +136,14 @@
     animation: jump-in var(--tw-animate-duration, 500ms) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }.cursor-pointer{
     cursor: pointer;
+}.flex-row{
+    flex-direction: row;
 }.flex-col{
     flex-direction: column;
-}.items-end{
-    align-items: flex-end;
 }.items-center{
     align-items: center;
 }.items-baseline{
     align-items: baseline;
-}.justify-end{
-    justify-content: flex-end;
 }.justify-center{
     justify-content: center;
 }.justify-between{
@@ -156,6 +156,12 @@
     border-width: 1px;
 }.border-b{
     border-bottom-width: 1px;
+}.border-b-2{
+    border-bottom-width: 2px;
+}.border-r-2{
+    border-right-width: 2px;
+}.border-gray5{
+    border-color: rgba(0, 0, 0, 0.50);
 }.border-primary{
     --tw-border-opacity: 1;
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -171,10 +177,14 @@
 }.bg-secondary{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}.bg-gray{
+    background-color: rgba(0, 0, 0, 0.60);
 }.bg-cover{
     background-size: cover;
 }.bg-center{
     background-position: center;
+}.p-2{
+    padding: 0.5rem;
 }.p-3{
     padding: 0.75rem;
 }.p-3\.5{
@@ -225,6 +235,8 @@
 }.text-white{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+}.text-gray{
+    color: rgba(0, 0, 0, 0.60);
 }.antialiased{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -381,8 +393,6 @@ h6 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }.lg\:flex-row{
         flex-direction: row;
-    }.lg\:flex-col{
-        flex-direction: column;
     }.lg\:items-center{
         align-items: center;
     }.lg\:p-xl{
