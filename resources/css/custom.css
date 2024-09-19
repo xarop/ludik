@@ -32,12 +32,15 @@ section,
 
 
 a:not(.btn) {
-    text-shadow: 1px 1px 0 rgba(var(--marker), 0.8);
-    transition: all .25s ease-in-out;
+    /* text-shadow: 1px 1px 0 rgba(var(--marker), 0.8); */
+    /* transition: all .25s ease-in-out; */
     font-weight: 500;
+    opacity: .75;
 
     &:hover:not(.btn) {
-        text-shadow: .2rem .2rem .2rem var(--marker);
+        opacity: 1;
+        /* text-shadow: .2rem .2rem .2rem var(--marker); */
+        /* border-bottom: dotted 1px var(--marker); */
     }
 }
 
