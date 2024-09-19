@@ -147,6 +147,10 @@ article {
 
 }
 
+.home .hero-header h2 {
+    @apply text-secondary;
+}
+
 /* Content */
 .entry-content {
     p {
