@@ -10,7 +10,6 @@ if ($link) {
     $cta = '<a href="' . $url . '" target="' . $target . '" class="btn mx-auto">' . $cta . '</a>';
 }
 
-
 // Get the content of the page
 the_post();
 $content = get_the_content();
@@ -50,13 +49,8 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 <?php else: ?>
 
 
-    <main class="container mx-auto">
-        <?php get_template_part('template-parts/hero'); ?>
-
-        <section>
-            <?php get_template_part('template-parts/content', get_post_format()); ?>
-        </section>
-
+    <main>
+        <?php get_template_part('template-parts/content-single'); ?>
     </main>
 
 <?php endif; ?>

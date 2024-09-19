@@ -2,8 +2,7 @@
 
     h1,
     pre {
-        @apply pre hidden lg:block ml-5;
-        color: var(--gray5);
+        @apply pre hidden lg:block m-0 ml-5 text-gray5;
     }
 
     .menu {

@@ -8,16 +8,20 @@ body,
 
 main,
 .main {
-    @apply container mx-auto;
+    @apply container;
 
     p {
-        @apply text-gray5;
+        /* @apply text-gray5; */
     }
 }
 
 nav,
 .nav {
     @apply flex flex-col lg:flex-row gap-5 justify-between p-lg lg:p-xl bg-secondary shadow;
+
+    &.pagination {
+        @apply justify-center flex-row;
+    }
 }
 
 
@@ -40,7 +44,7 @@ a:not(.btn) {
 .current_page_parent,
 .current_page_item {
     a {
-        text-shadow: .2rem .2rem .2rem var(--marker);
+        text-shadow: .2rem .2rem .2rem var(--marker) !important;
     }
 }
 
@@ -49,7 +53,7 @@ a:not(.btn) {
 section {}
 
 .container {
-    @apply mx-auto max-w-screen-xl px-5;
+    @apply mx-auto max-w-screen-xl;
 }
 
 
@@ -133,6 +137,7 @@ article {
             font-size: 12vw;
             text-shadow: 4px 4px 0px #000;
             font-weight: 700;
+            margin: 0;
         }
     }
 
@@ -142,6 +147,12 @@ article {
 
 }
 
+/* Content */
+.entry-content {
+    p {
+        @apply text-gray;
+    }
+}
 
 /* Hamburger Menu */
 .hamburger {
@@ -206,4 +217,43 @@ textarea {
 .wpcf7-submit {
     @apply btn;
     @apply max-w-full bg-gray text-secondary;
+}
+
+.card {
+    @apply relative;
+
+    a:hover {
+        text-shadow: none !important;
+    }
+
+    &-content {
+        @apply p-sm;
+
+        h2 {
+            @apply text-large my-sm;
+        }
+
+        .card-resume {
+            @apply text-gray4;
+        }
+
+
+    }
+
+    &.work {
+
+        h2 {
+            @apply text-xxl text-secondary;
+        }
+
+        pre,
+        time,
+        .card-resume {
+            @apply text-gray6;
+        }
+
+        .card-content {
+            @apply absolute text-secondary top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center bg-gray4 opacity-0 hover:opacity-100;
+        }
+    }
 }

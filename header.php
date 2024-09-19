@@ -6,15 +6,12 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<?php do_action('ludik_site_before'); ?>
-
-
 
 	<?php do_action('ludik_header'); ?>
 
@@ -33,8 +30,8 @@
 
 
 						<?php
-						if (is_front_page()) echo '<h1>' . get_bloginfo('description') . '</h1>';
-						else echo '<pre>' . get_bloginfo('description') . '</pre>';
+						if (is_front_page()) echo '<h1 class="hidden lg:block">' . get_bloginfo('description') . '</h1>';
+						else echo '<pre class="hidden lg:block">' . get_bloginfo('description') . '</pre>';
 						?>
 					</div>
 
@@ -43,9 +40,7 @@
 
 				<?php get_template_part('template-parts/menu'); ?>
 
-
-
-		</div>
+			</nav>
 		</div>
 	</header>
 

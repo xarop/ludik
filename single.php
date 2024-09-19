@@ -1,16 +1,13 @@
 <?php get_header(); ?>
 
-<div class="container my-8 mx-auto">
-
+<main>
 
 	<?php if (have_posts()) : ?>
-
 
 		<?php
 		while (have_posts()) :
 			the_post();
 		?>
-
 
 			<?php get_template_part('template-parts/content', 'single'); ?>
 
@@ -25,7 +22,7 @@
 
 	<?php endif; ?>
 
-</div>
+</main>
 
 <?php
 get_footer();

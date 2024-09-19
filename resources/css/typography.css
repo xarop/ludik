@@ -5,6 +5,7 @@ body {
     @apply text-base font-sans;
 }
 
+
 h1,
 h2,
 h3,
@@ -12,12 +13,14 @@ h4,
 h5,
 h6 {
     font-weight: 300;
-    line-height: 100%;
+    line-height: 140%;
     margin: 0;
+    color: var(--primary);
 }
 
 h1 {
     font-size: var(--xxxl);
+    /* margin-bottom: var(--xl); */
 }
 
 h2 {
@@ -32,12 +35,13 @@ h3 {
 
 
 p {
-    line-height: 170%;
-    margin: 0;
+    @apply mb-lg;
 }
 
+
 pre,
-.pre {
-    @apply text-base uppercase font-sans;
+.pre,
+time {
+    @apply text-base uppercase font-sans text-gray5 py-sm;
     font-weight: 300;
 }
