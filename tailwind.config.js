@@ -14,22 +14,50 @@ module.exports = {
         fontFamily: {
             sans: ['Epilogue', 'sans-serif']
         },
+        fontSize: {
+            sm: ['12px', '120%'],
+            base: ['20px', '150%'],
+            large: ['24px', '150%'],
+            h3: ['32px', '120%'],
+            h2: ['48px', '120%'],
+            h1: ['64px', '120%'],
+            huge: ['150px', '120%']
+        },
+        fontWeight: {
+            thin: '100',
+            extralight: '200',
+            light: '300',
+            normal: '400',
+            medium: '500',
+            semibold: '600',
+            bold: '700',
+            extrabold: '800',
+            black: '900',
+        },
         container: {
             padding: {
                 DEFAULT: '1rem',
-                sm: '2rem',
-                lg: '0rem'
+                sm: '12px',
+                lg: '32px',
+                xl: '42px',
+                xxl: '48px',
+                xxxl: '64px',
+                xxxxl: '84px'
             },
         },
         extend: {
             colors: ludik.colorMapper(ludik.theme('settings.color.palette', theme)),
             fontSize: ludik.fontSizeMapper(ludik.theme('settings.typography.fontSizes', theme)),
             spacing: {
-                hero: '480px',
-                xl: '32px',
+                xs: '6px',
+                sm: '12px',
+                md: '24px',
+                lg: '32px',
+                xl: '42px',
                 xxl: '48px',
                 xxxl: '64px',
-                xxxxl: '84px'
+                xxxxl: '84px',
+                hero: '480px'
             },
         },
         screens: {

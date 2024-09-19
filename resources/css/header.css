@@ -1,0 +1,18 @@
+.site-header {
+
+    h1,
+    pre {
+        @apply pre hidden lg:block ml-5;
+        color: var(--gray5);
+    }
+
+    .menu {
+        @apply hidden absolute right-[-100vw] w-full p-10;
+        @apply lg:flex lg:relative lg:-mx-4 lg:right-0 lg:p-0;
+        margin: 0 !important;
+
+        .menu-item {
+            @apply py-4;
+        }
+    }
+}

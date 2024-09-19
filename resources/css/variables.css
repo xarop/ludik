@@ -1,7 +1,7 @@
 :root {
     --primary: #000000;
     --secondary: #ffffff;
-    --bg: #F4F4F4;
+    --background: #F4F4F4;
     --gray: rgba(0, 0, 0, 0.75);
     --gray5: rgba(0, 0, 0, 0.5);
     --gray9: rgba(255, 255, 255, 0.95);
@@ -9,13 +9,17 @@
     --gray4: rgba(0, 0, 0, 0.4);
     --marker: #00ffff;
     --markershadow: #00ffff;
-    --lg: 42px;
-    --md: 24px;
-    --sm: 12px;
-    --xs: 6px;
-    --regular: 20px;
+    --base: 20px;
     --large: 24px;
-    --xl: 32px;
+    --h3: 32px;
+    --h2: 48px;
+    --h1: 64px;
+    --huge: 150px;
+    --xs: 6px;
+    --sm: 12px;
+    --md: 24px;
+    --lg: 32px;
+    --xl: 42px;
     --xxl: 48px;
     --xxxl: 64px;
     --xxxxl: 84px;

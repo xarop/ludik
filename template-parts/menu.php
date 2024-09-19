@@ -2,7 +2,7 @@
 $social = get_field('social', 'option');
 ?>
 
-<nav class="lg:flex items-center justify-center">
+<div class="lg:flex items-center justify-center">
 
     <?php
     wp_nav_menu(
@@ -41,4 +41,4 @@ $social = get_field('social', 'option');
         </button>
     </div>
 
-</nav>
+</div>

@@ -7,7 +7,7 @@ if ($link) {
     $url = esc_url($link['url']);
     $cta = esc_html($link['title']);
     $target = esc_attr($link['target']) ? esc_attr($link['target']) : '_self';
-    $cta = '<a href="' . $url . '" target="' . $target . '" class="btn mx-auto my-10">' . $cta . '</a>';
+    $cta = '<a href="' . $url . '" target="' . $target . '" class="btn mx-auto">' . $cta . '</a>';
 }
 
 
@@ -30,23 +30,18 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
     <main>
 
-        <header class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
-            <div class="hero-header">
-                <h2><?php the_title(); ?></h2>
-            </div>
-            <article class="hero-content">
-                <?php echo apply_filters('the_content', $content); ?>
-            </article>
-        </header>
-
-
+        <?php get_template_part('template-parts/hero'); ?>
 
         <?php if ($shortcode): ?>
             <section class="gallery">
                 <!-- Gallery -->
-                <h3 class="text-center p-xl lg:pt-xxxxl"><?php echo $title ?></h3>
-                <?php echo do_shortcode($shortcode); ?>
-                <?php echo $cta; ?>
+                <div class="lg:py-xxxxl p-md">
+
+                    <h3 class="text-center"><?php echo $title ?></h3>
+                    <?php echo do_shortcode($shortcode); ?>
+                    <?php echo $cta; ?>
+
+                </div>
 
             </section>
         <?php endif; ?>
@@ -55,10 +50,8 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 <?php else: ?>
 
 
-    <main class=" container mx-auto">
-        <!-- <header class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
-            <h1><?php the_title(); ?></h1>
-        </header> -->
+    <main class="container mx-auto">
+        <?php get_template_part('template-parts/hero'); ?>
 
         <section>
             <?php get_template_part('template-parts/content', get_post_format()); ?>

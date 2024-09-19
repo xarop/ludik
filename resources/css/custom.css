@@ -1,6 +1,30 @@
-main {
-    @apply container mx-auto;
+@import "header.css";
+@import "footer.css";
+
+body,
+.body {
+    @apply bg-background;
 }
+
+main,
+.main {
+    @apply container mx-auto;
+
+    p {
+        @apply text-gray5;
+    }
+}
+
+nav,
+.nav {
+    @apply flex flex-col lg:flex-row gap-5 justify-between p-lg lg:p-xl bg-secondary shadow;
+}
+
+section,
+.section {
+    @apply bg-secondary shadow;
+}
+
 
 a:not(.btn) {
     text-shadow: 1px 1px 0 rgba(var(--marker), 0.8);
@@ -30,9 +54,12 @@ section {}
 
 .content,
 [class$="-content"] {
-    @apply lg:p-xxxxl p-xl;
-
+    @apply p-md lg:p-xxxxl;
 }
+
+
+
+
 
 article {
     /* @apply py-10 max-w-screen-lg mx-auto; */
@@ -41,25 +68,6 @@ article {
 
 .menu {
     @apply lg:flex;
-}
-
-.site-header {
-
-    h1,
-    pre {
-        @apply pre hidden lg:block ml-5;
-        color: var(--gray5);
-    }
-
-    .menu {
-        @apply hidden absolute right-[-100vw] w-full p-10 text-2xl;
-        @apply lg:flex lg:relative lg:-mx-4 lg:right-0 lg:p-0 lg:text-lg;
-        margin: 0 !important;
-
-        .menu-item {
-            @apply py-4;
-        }
-    }
 }
 
 .menu-item {
@@ -72,14 +80,14 @@ article {
 
     main {
         filter: blur(2px);
+        transition: all .25s ease-in-out;
     }
 
     .site-header {
         @apply z-50 relative w-full h-full;
 
         .menu {
-            @apply block right-0 top-0 py-32;
-            background-color: var(--bg);
+            @apply block right-0 top-0 py-32 bg-background;
         }
     }
 
@@ -89,7 +97,7 @@ article {
 
 .btn {
     display: block;
-    max-width: var(--4xl);
+    max-width: fit-content;
     font-weight: 500;
     text-align: center;
     color: var(--primary);
@@ -114,28 +122,26 @@ article {
 /* Hero */
 .hero {
 
-    @apply bg-cover bg-center flex flex-col items-center justify-center text-white;
+    @apply bg-cover bg-center flex flex-col items-center justify-center shadow;
 
     &-header {
-        @apply lg:h-hero flex justify-center items-center;
+        @apply lg:h-hero py-xxl px-xl flex justify-center items-center text-white;
+
+        h1,
+        h2 {
+            font-size: 12vw;
+            text-shadow: 4px 4px 0px #000;
+            font-weight: 700;
+        }
     }
 
     &-content {
-        @apply text-center;
+        @apply bg-gray9 w-full;
     }
 
-    h1,
-    h2 {
-        font-size: 12vw;
-        color: #FFF;
-        text-shadow: 4px 4px 0px #000;
-        font-weight: 700;
-    }
 
-    article {
-        color: var(--primary);
-        background-color: var(--gray6);
-    }
+
+
 
 }
 

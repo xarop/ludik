@@ -19,8 +19,8 @@
 	<?php do_action('ludik_header'); ?>
 
 	<header class="site-header">
-		<div class="mx-auto container">
-			<div class="flex justify-between items-center py-6">
+		<div class="container">
+			<nav>
 				<div class="site-logo z-50 flex justify-between items-center">
 					<div class="flex items-center">
 						<?php if (has_custom_logo()) { ?>
@@ -45,7 +45,7 @@
 
 
 
-			</div>
+		</div>
 		</div>
 	</header>
 

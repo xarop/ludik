@@ -4,18 +4,18 @@
 
 <?php do_action('ludik_content_after'); ?>
 
-<footer id="colophon" class="site-footer container" role="contentinfo">
+<footer id="colophon" class="site-footer" role="contentinfo">
 	<?php do_action('ludik_footer'); ?>
 
 	<?php if (have_rows('contact', 'option')):  ?>
-		<ul class="flex flex-col lg:flex-row gap-5 w-full justify-between bg-black text-white p-10">
+		<ul class="nav footer-contact">
 			<?php
 			while (have_rows('contact', 'option')): the_row();
 				$name = get_sub_field('name');
 				$email = get_sub_field('email');
 				$tel = get_sub_field('tel');
 			?>
-				<li class="flex items-center gap-2">
+				<li>
 					<?php if (esc_attr($name)) echo '<span>' . esc_attr($name) . '</span>'; ?>
 					<a href="mailto:<?php echo esc_url($email); ?>" target="_blank" title="<?php echo esc_attr($email); ?>"><?php echo esc_attr($email); ?></a>
 					<a href="tel:<?php echo esc_url($tel); ?>" target="_blank" title="<?php echo esc_attr($tel); ?>"><?php echo esc_attr($tel); ?></a>
@@ -25,23 +25,23 @@
 	<?php endif; ?>
 
 	<?php if (have_rows('banners', 'option')):  ?>
-		<section class="p-10 flex flex-wrap justify-center gap-10">
+		<div class="site-footer-content">
 			<?php
 			while (have_rows('banners', 'option')): the_row();
 				$name = get_sub_field('url');
 				$image = get_sub_field('image');
 			?>
 
-				<a href="<?php echo esc_url($url); ?>" target="_blank" nofollow>
+				<a href="<?php echo esc_url($url); ?>" target="_blank" nofollow class=" opacity-50 hover:opacity-100">
 					<img src="<?php echo $image; ?>">
 				</a>
 
 
 			<?php endwhile; ?>
-		</section>
+		</div>
 	<?php endif; ?>
 
-	<div class="lg:flex lg:justify-between lg:items-center py-10">
+	<nav class="nav">
 
 		<div class="lg:flex lg:items-center">
 
@@ -69,9 +69,9 @@
 			</ul>
 		<?php endif; ?>
 
-		<div class="menu-item text-gray-400">developed in Barcelona by &nbsp;<a href="https://xarop.com" target="_blank">xarop.com</a></div>
+		<div class="menu-item opacity-60">developed in Barcelona by &nbsp;<a href="https://xarop.com" target="_blank">xarop.com</a></div>
 
-	</div>
+	</nav>
 </footer>
 
 </div>

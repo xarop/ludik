@@ -1,3 +1,4 @@
-.wp-block-media-text {
-    @apply my-20;
+.wp-block-media-text,
+.wp-block-column {
+    @apply mb-xxl !important;
 }

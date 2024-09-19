@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
     font-weight: 300;
-    line-height: 140%;
+    line-height: 100%;
     margin: 0;
 }
 
@@ -22,11 +22,14 @@ h1 {
 
 h2 {
     font-size: var(--xxl);
+    margin-bottom: var(--xl);
 }
 
 h3 {
-    font-size: var(--xl);
+    font-size: var(--lg);
+    margin-bottom: var(--lg);
 }
+
 
 p {
     line-height: 170%;
@@ -36,4 +39,5 @@ p {
 pre,
 .pre {
     @apply text-base uppercase font-sans;
+    font-weight: 300;
 }
