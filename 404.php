@@ -1,3 +1,6 @@
+<?php
+$avatar = get_field('avatar', 'option');
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 
@@ -15,9 +18,12 @@
 			<div class="max-w-sm m-8">
 				<div class="text-5xl md:text-15xl text-gray-800 border-primary border-b">404</div>
 				<div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
-				<p class="text-gray-800 text-2xl md:text-3xl font-light mb-8"><?php _e('Sorry, the page you are looking for could not be found.', 'ludik'); ?></p>
+				<?php
+				if ($avatar) echo '<figure><img src="' . esc_url($avatar) . '" /></figure>';
+				?>
+				<p class="text-gray-800 text-2xl md:text-3xl font-light mb-8"><?php _e('Parece que estas buscando algo que no existe.', 'ludik'); ?></p>
 				<a href="<?php echo get_bloginfo('url'); ?>" class="bg-primary px-4 py-2 rounded text-white">
-					<?php _e('Go Home', 'ludik'); ?>
+					<?php _e('Ir a la portada', 'ludik'); ?>
 				</a>
 			</div>
 		</div>
