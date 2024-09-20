@@ -9,17 +9,16 @@ if (get_post_type() == 'work') $img_size = 'medium';
 	<a href="<?php echo esc_url($post_url); ?>">
 
 		<header class="card-header">
-			<?php
-			// Display the featured image with a link to the single post
-			if (has_post_thumbnail()) :
-				$post_url = get_permalink(); // URL of the single post
-			?>
-				<figure>
-					<?php the_post_thumbnail($img_size, array('class' => 'entry-thumbnail')); ?>
-				</figure>
-			<?php
-			endif;
-			?>
+			<figure>
+				<?php
+				$post_url = get_permalink();
+				if (has_post_thumbnail()) :
+					the_post_thumbnail($img_size, array('class' => 'entry-thumbnail'));
+				else:
+					echo '<img src="' . get_template_directory_uri() . '/img/avatar.png" alt="' . get_the_title() . '" />';
+				endif;
+				?>
+			</figure>
 		</header>
 
 		<div class="card-content">

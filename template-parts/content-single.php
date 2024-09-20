@@ -2,6 +2,26 @@
 
 	<div class="shadow">
 		<?php get_template_part('template-parts/hero'); ?>
+
+		<?php
+		if (have_rows('work')):
+			while (have_rows('work')): the_row();
+				$image = get_sub_field('image');
+				$text = get_sub_field('text');
+				echo '<div class="post-header">';
+				echo '<figure>';
+				if ($image) echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" />';
+				echo '</figure>';
+				echo '<div class="p-xl text-gray5">';
+				echo  $text;
+				echo '</div>';
+				echo '</div>';
+			endwhile;
+		endif;
+		?>
+
+
+
 		<div class="entry-content">
 			<?php the_content(); ?>
 

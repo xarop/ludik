@@ -59,8 +59,14 @@ get_header(); // Include the header template part
                 <?php if (has_post_thumbnail()) : ?>
                     <figure class="post-thumbnail" style="width: 100px;">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('thumbnail'); // Display the thumbnail in medium size 
+                            <?php the_post_thumbnail('thumbnail'); // Display the thumbnail 
                             ?>
+                        </a>
+                    </figure>
+                <?php else : ?>
+                    <figure class="post-thumbnail" style="width: 100px;">
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/resources/img/none.png" alt="<?php the_title(); ?>" /> <!-- Adjust the path to your default image -->
                         </a>
                     </figure>
                 <?php endif; ?>

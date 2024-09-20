@@ -49,3 +49,7 @@ time {
 small {
     @apply text-sm;
 }
+
+blockquote {
+    @apply text-gray5 text-large italic;
+}

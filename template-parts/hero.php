@@ -29,8 +29,8 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
     <?php switch ($type) {
         case 'post':
         case 'work':
-            echo '<header class="p-lg lg:p-xxxxl pb-0 lg:pb-0 flex flex-col lg:flex-row items-top">';
-            if ($background_image) echo '<figure class="max-w-screen-sm"><img src="' . esc_url($background_image) . '" alt="' . esc_attr($title) . '" /></figure>';
+            echo '<header class="post-header">';
+            if ($background_image) echo '<figure><img src="' . esc_url($background_image) . '" alt="' . esc_attr($title) . '" /></figure>';
             echo '<div class="p-xl">';
             if ($pretitle) echo '<pre>' . $pretitle . '</pre>';
             else ludik_time();
