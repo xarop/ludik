@@ -185,7 +185,7 @@ article {
     @apply text-secondary;
 }
 
-/* PST @ Works */
+/* Posts */
 .post-header {
     @apply p-lg lg:p-xxxxl pb-0 lg:pb-0 grid lg:grid-cols-2;
 }
