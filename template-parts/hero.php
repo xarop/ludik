@@ -9,6 +9,10 @@ $content = get_post_field('post_content', $index);
 $image = get_field('image', $index);
 
 $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+if (!$background_image) {
+    $background_image = get_field('background', 'option');
+}
+
 ?>
 
 <?php if (is_front_page()) : ?>

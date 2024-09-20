@@ -1,5 +1,6 @@
 <?php
 get_header(); // Include the header template part
+$avatar = get_field('background', 'option');
 ?>
 
 <main id="main" class="site-archive">
@@ -41,12 +42,18 @@ get_header(); // Include the header template part
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : ?>
-        <header class="header">
-            <div class="header-inner content lg:py-lg bg-gray2 shadow">
-                <h1><?php echo $header_title; ?></h1>
-                <?php the_archive_description('<p class="archive-description">', '</small>'); ?>
+        <header class="header" style="background-image: url('<?php echo $avatar; ?>');">
+            <div class="header-inner">
+                <figure class="w-full h-full bg-gray6 absolute"></figure>
+                <div class="p-lg lg:pl-xxxxl z-20">
+                    <h1><?php echo $header_title; ?></h1>
+                </div>
+                <div class="p-lg z-20">
+                    <?php the_archive_description('<p class="archive-description">', '</small>'); ?>
+                </div>
             </div>
-        </header><!-- .page-header -->
+        </header>
+
 
         <?php
         // Start the loop
@@ -66,7 +73,7 @@ get_header(); // Include the header template part
                 <?php else : ?>
                     <figure class="post-thumbnail" style="width: 100px;">
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/avatar.png" alt="<?php the_title(); ?>" /> <!-- Adjust the path to your default image -->
+                            <img src="<?php echo $avatar; ?>" alt="<?php the_title(); ?>" />
                         </a>
                     </figure>
                 <?php endif; ?>

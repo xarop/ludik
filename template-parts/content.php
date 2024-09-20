@@ -4,6 +4,7 @@ $resume = get_field('resume') ? get_field('resume') : '';
 $img_size = 'thumbnail';
 $post_url = get_permalink();
 if (get_post_type() == 'work') $img_size = 'medium';
+$avatar = get_field('background', 'option');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 	<a href="<?php echo esc_url($post_url); ?>">
@@ -15,7 +16,7 @@ if (get_post_type() == 'work') $img_size = 'medium';
 				if (has_post_thumbnail()) :
 					the_post_thumbnail($img_size, array('class' => 'entry-thumbnail'));
 				else:
-					echo '<img src="' . get_template_directory_uri() . '/img/avatar.png" alt="' . get_the_title() . '" />';
+					echo '<img src="' . $avatar . '" alt="' . get_the_title() . '" />';
 				endif;
 				?>
 			</figure>

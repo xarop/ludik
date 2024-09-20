@@ -19,7 +19,7 @@ h6 {
 }
 
 h1 {
-    font-size: var(--xxxl);
+    @apply text-h2 lg:text-h1;
     /* margin-bottom: var(--xl); */
 }
 
