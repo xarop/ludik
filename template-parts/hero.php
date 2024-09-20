@@ -43,8 +43,8 @@ $background_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
         default:
     ?>
 
-            <header class="bg-cover bg-center relative" style="background-image: url('<?php echo esc_url($background_image); ?>');">
-                <div class="grid lg:grid-cols-2 w-full items-center justify-center ">
+            <header class="header" style="background-image: url('<?php echo esc_url($background_image); ?>');">
+                <div class="header-inner">
                     <figure class="w-full h-full bg-gray6 absolute"></figure>
                     <div class="z-20 flex flex-col items-baseline justify-center">
                         <?php if ($image):

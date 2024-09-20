@@ -33,6 +33,7 @@
 		"tailwindcss": "^3.4.0"
 	},
 	"dependencies": {
+		"@jeffreyvr/tailwindcss-tailpress": "^2.0.0",
 		"tailwindcss-animated": "^1.1.2"
 	}
 }

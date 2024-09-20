@@ -58,15 +58,14 @@
 }.my-8{
     margin-top: 2rem;
     margin-bottom: 2rem;
-}.my-sm{
-    margin-top: 12px;
-    margin-bottom: 12px;
 }.mb-8{
     margin-bottom: 2rem;
 }.mb-lg{
     margin-bottom: 32px;
 }.mb-sm{
     margin-bottom: 12px;
+}.mb-xl{
+    margin-bottom: 42px;
 }.mb-xxl{
     margin-bottom: 48px;
 }.ml-5{
@@ -87,6 +86,8 @@
     height: 0.25rem;
 }.h-6{
     height: 1.5rem;
+}.h-auto{
+    height: auto;
 }.h-full{
     height: 100%;
 }.max-h-form{
@@ -165,6 +166,10 @@
     gap: 1.25rem;
 }.gap-lg{
     gap: 32px;
+}.gap-sm{
+    gap: 12px;
+}.overflow-hidden{
+    overflow: hidden;
 }.rounded{
     border-radius: 0.25rem;
 }.border{
@@ -175,6 +180,10 @@
     border-bottom-width: 2px;
 }.border-r-2{
     border-right-width: 2px;
+}.border-t-2{
+    border-top-width: 2px;
+}.border-gray1{
+    border-color: rgba(0, 0, 0, 0.10);
 }.border-gray5{
     border-color: rgba(0, 0, 0, 0.50);
 }.border-primary{
@@ -182,6 +191,8 @@
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }.bg-gray{
     background-color: rgba(0, 0, 0, 0.60);
+}.bg-gray2{
+    background-color: rgba(0, 0, 0, 0.20);
 }.bg-gray4{
     background-color: rgba(0, 0, 0, 0.40);
 }.bg-gray6{
@@ -198,6 +209,8 @@
     background-size: cover;
 }.bg-center{
     background-position: center;
+}.p-0{
+    padding: 0px;
 }.p-2{
     padding: 0.5rem;
 }.p-3{
@@ -230,6 +243,9 @@
 }.py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
+}.py-sm{
+    padding-top: 12px;
+    padding-bottom: 12px;
 }.py-xxl{
     padding-top: 48px;
     padding-bottom: 48px;
@@ -326,7 +342,7 @@
     margin-bottom: 0.5rem;
     line-height: 1;
 }.wp-caption-text{
-    font-size: 12px;
+    font-size: 16px;
     color: #718096;
 }:root {
     --primary: #000000;
@@ -390,6 +406,9 @@ time{
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.50);
     font-weight: 300;
+}small{
+    font-size: 16px;
+    line-height: 120%;
 }body{
     font-family: Epilogue, sans-serif;
 }.editor-styles-wrapper{
@@ -400,6 +419,8 @@ time{
     max-width: 1300px;
 }.wp-block[data-align=full]{
     max-width: 100%;
+}.hover\:border-gray5:hover{
+    border-color: rgba(0, 0, 0, 0.50);
 }.hover\:opacity-100:hover{
     opacity: 1;
 }@media (min-width: 782px){.md\:my-6{
@@ -439,6 +460,9 @@ time{
         padding: 42px;
     }.lg\:p-xxxxl{
         padding: 84px;
+    }.lg\:py-lg{
+        padding-top: 32px;
+        padding-bottom: 32px;
     }.lg\:py-xxxxl{
         padding-top: 84px;
         padding-bottom: 84px;

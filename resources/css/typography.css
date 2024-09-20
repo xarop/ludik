@@ -45,3 +45,7 @@ time {
     @apply text-base uppercase font-sans text-gray5 py-sm;
     font-weight: 300;
 }
+
+small {
+    @apply text-sm;
+}

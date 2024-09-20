@@ -28,6 +28,16 @@
           "color": "rgba(0, 0, 0, 0.60)"
         },
         {
+          "name": "Gray1",
+          "slug": "gray1",
+          "color": "rgba(0, 0, 0, 0.10)"
+        },
+        {
+          "name": "Gray2",
+          "slug": "gray2",
+          "color": "rgba(0, 0, 0, 0.20)"
+        },
+        {
           "name": "Gray4",
           "slug": "gray4",
           "color": "rgba(0, 0, 0, 0.40)"

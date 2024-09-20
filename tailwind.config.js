@@ -15,7 +15,7 @@ module.exports = {
             sans: ['Epilogue', 'sans-serif']
         },
         fontSize: {
-            sm: ['12px', '120%'],
+            sm: ['16px', '120%'],
             base: ['20px', '150%'],
             large: ['24px', '150%'],
             h3: ['32px', '120%'],
