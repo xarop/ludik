@@ -130,6 +130,7 @@
                         },
                         "choices": {
                             "instagram": "instagram",
+                            "whatsapp": "whatsapp",
                             "linkedin": "linkedin",
                             "twitter": "twitter",
                             "facebook": "facebook"

@@ -21,7 +21,7 @@ $social = get_field('social', 'option');
                     $icon = get_sub_field('social');
                     $url = get_sub_field('url');
                 ?>
-                    <li class="menu-item"><a class="icon icon-<?php echo esc_attr($icon); ?>" href="<?php echo esc_url($url); ?>" target="_blank" title="<?php echo esc_attr($icon); ?>"></a></li>
+                    <li class="menu-icon"><a class="icon icon-<?php echo esc_attr($icon); ?>" href="<?php echo esc_url($url); ?>" target="_blank" title="<?php echo esc_attr($icon); ?>"></a></li>
                 <?php endwhile; ?>
             </ul>
         <?php endif; ?>
