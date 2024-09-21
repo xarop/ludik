@@ -70,10 +70,12 @@
 			</ul>
 		<?php endif; ?>
 
-		<div class="menu-item opacity-60">developed in Barcelona by &nbsp;<a href="https://xarop.com" target="_blank">xarop.com</a></div>
 
 	</nav>
 </footer>
+
+<small class="opacity-50 text-center p-lg block">developed in Barcelona by &nbsp;<a href="https://xarop.com" target="_blank">xarop.com</a></small>
+
 
 </div>
 

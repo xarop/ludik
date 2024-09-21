@@ -7,7 +7,7 @@ if (get_post_type() == 'work') $img_size = 'medium';
 $avatar = get_field('background', 'option');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
-	<a href="<?php echo esc_url($post_url); ?>">
+	<a href="<?php echo esc_url($post_url); ?>" title="<?php the_title(); ?>">
 
 		<header class="card-header">
 			<figure>

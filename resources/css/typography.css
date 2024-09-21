@@ -54,6 +54,7 @@ blockquote {
     @apply text-gray5 text-large italic;
 }
 
+.text-large,
 .has-large-font-size {
-    line-height: 170%;
+    line-height: 160%;
 }

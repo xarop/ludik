@@ -121,6 +121,7 @@ add_filter('nav_menu_submenu_css_class', 'ludik_nav_menu_add_submenu_class', 10,
 function ludik_time()
 {
 	if (get_post_type() != 'page') {
-		echo '<time datetime="' . get_the_date('c') . '" itemprop="datePublished">' . get_the_date() . '</time>';
+		$pretitle = get_field('pretitle') ? get_field('pretitle') : get_the_date();
+		echo '<time datetime="' . get_the_date('c') . '" itemprop="datePublished">' . $pretitle . '</time>';
 	}
 }
