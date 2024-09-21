@@ -1,43 +1,10 @@
-<p><img src="http://ludik.io/images/ludik100.svg" width="260" alt="ludik"></p>
-
-[![GitHub release](https://img.shields.io/github/release/jeffreyvr/ludik?include_prereleases=&sort=semver)](https://github.com/jeffreyvr/ludik/releases/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-
 # Introduction
 
-ludik is a minimal boilerplate theme for WordPress using [Tailwind CSS](https://tailwindcss.com/).
+A theme for WordPress using [Tailpress](https://tailpress.io)
 
 ## Getting started
 
-### Using the installer
-
-You can get started using the installer (using composer):
-
-```bash
-composer global require jeffreyvanrossum/ludik-installer
-
-ludik new example-theme
-```
-
-_If the ludik command is not found, make sure to place Composer's global vendor bin in your `$PATH` ([see](#command-ludik-not-found))._
-
-Flags you can pass when using the installer:
-
-- Set a theme name `--name="Example Theme"`
-- Choose your compiler, mix or esbuild: `--compiler="esbuild"`
-- Initialize a git repository `--git`
-- Set the git branch name `--branch="main"`
-
-If you choose to install WordPress through the installer, these flags might be of interest as well:
-`--dbname`, `--dbuser`, `--dbpass` and `--dbhost`.
-
-Once your theme is ready, don't forget to cd into the directory.
-
-You will be asked if you would like to have WordPress installed as well. Keep in mind that you still need a local development environment for PHP and MySQL.
-
-### Regular method
-
-- Clone repo `git clone https://github.com/jeffreyvr/ludik.git && cd ludik`
+- Clone repo `git clone https://github.com/xarop/ludik.git && cd ludik`
 - Run `rm -rf .git` to remove git (or `rmdir .git` for Windows)
 - Run `npm install`
 - Run `npm run watch` to start developing
@@ -72,19 +39,10 @@ CSS classes for alignment (full, wide etc.) are generated automatically. You can
 
 Several colors and font sizes are defined from the beginning. You can modify them in `theme.json`.
 
-### Command `ludik` not found
-
-Make sure to place Composer's global vendor bin directory in your `$PATH` so the `ludik` executable can be found by your system. This directory exists in different locations based on your operating system; however, some common locations include:
-
-- macOS: `$HOME/.composer/vendor/bin`
-- Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
-- GNU / Linux Distributions: `$HOME/.config/composer/vendor/bin or $HOME/.composer/vendor/bin`
-
-You could also find the composer's global installation path by running `composer global about` and looking up from the first line.
 
 ## Links
 
-- [ludik website](https://ludik.io)
+- [Tailpress website](https://tailpress.io)
 - [Screencasts](https://www.youtube.com/playlist?list=PL6GBdOp044SHIOSCZejodwr1HcYsC43wG)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Tailwind Animation Documentation](https://www.tailwindcss-animated.com/configurator.html)
