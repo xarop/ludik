@@ -18,8 +18,10 @@ if (!$background_image) {
 <?php if (is_front_page()) : ?>
 
     <header class="hero" style="background-image: url('<?php echo esc_url($background_image); ?>');">
-        <div class="hero-header">
+        <div class="hero-header flex-col">
+            <?php if ($pretitle) echo '<pre class="text-gray9">' . $pretitle . '</pre>'; ?>
             <h2><?php echo $title; ?></h2>
+            <?php echo $resume; ?>
         </div>
         <article class="hero-content">
             <div class="max-w-screen-md mx-auto text-center">

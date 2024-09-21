@@ -60,28 +60,25 @@ $avatar = get_field('background', 'option');
         echo '<div class="content shadow bg-secondary">';
         while ($query->have_posts()) :
             $query->the_post();
+            $title = get_field('title') ? get_field('title') : get_the_title();
             $resume = get_field('resume') ? get_field('resume') : '';
         ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('flex gap-sm mb-xl block'); ?>>
-                <?php if (has_post_thumbnail()) : ?>
-                    <figure class="post-thumbnail" style="width: 100px;">
-                        <a href="<?php the_permalink(); ?>">
+                <figure class="post-thumbnail" style="width: 100px;">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('thumbnail'); // Display the thumbnail 
                             ?>
-                        </a>
-                    </figure>
-                <?php else : ?>
-                    <figure class="post-thumbnail" style="width: 100px;">
-                        <a href="<?php the_permalink(); ?>">
-                            <img src="<?php echo $avatar; ?>" alt="<?php the_title(); ?>" />
-                        </a>
-                    </figure>
-                <?php endif; ?>
+                        <?php else : ?>
+                            <img src="<?php echo esc_url($avatar); ?>" alt="<?php echo esc_attr($resume); ?>" />
+                        <?php endif; ?>
+                    </a>
+                </figure>
+
                 <div class="w-full">
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h3>
                     <small class="text-gray5"><?php echo $resume; ?></small>
                 </div>
-
 
             </article>
     <?php

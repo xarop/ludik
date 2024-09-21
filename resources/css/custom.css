@@ -157,11 +157,6 @@ article {
 
 
 
-/* Home */
-.home-content {
-    @apply text-center;
-}
-
 /* Hero */
 .hero {
 
