@@ -2,6 +2,11 @@
 $index = get_the_ID();
 $type = get_post_type();
 
+if (is_home()):
+    $type = 'home';
+    $index = get_option('page_for_posts');
+endif;
+
 $pretitle = get_field('pretitle', $index) ? get_field('pretitle', $index) : '';
 $title = get_field('title', $index) ? get_field('title', $index) : get_the_title($index);
 $resume = get_field('resume', $index) ? get_field('resume', $index) : '';
@@ -57,8 +62,8 @@ if (!$background_image) {
                             echo '<figure class="mx-auto"><img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" /></figure>';
                         else:
                             echo '<div class="p-lg lg:p-xxxxl">';
-                            ludik_time();
-                            echo '<pre>' . $pretitle . '</pre>';
+                            ludik_time($pretitle);
+                            // echo '<pre>' . $pretitle . '</pre>';
                             echo '<h1>' . $title . '</h1>';
                             echo '</div>';
                         endif;

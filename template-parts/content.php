@@ -1,5 +1,6 @@
 <?php
 $title = get_field('title') ? get_field('title') : get_the_title();
+$pretitle = get_field('pretitle') ? get_field('pretitle') : '';
 $resume = get_field('resume') ? get_field('resume') : '';
 $img_size = 'thumbnail';
 $post_url = get_permalink();
@@ -23,7 +24,7 @@ $avatar = get_field('background', 'option');
 		</header>
 
 		<div class="card-content">
-			<?php ludik_time(); ?>
+			<?php ludik_time($pretitle); ?>
 			<?php //the_title(sprintf('<h2><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); 
 			?>
 			<?php echo '<h2>' . $title . '</h2>'; ?>
