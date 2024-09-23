@@ -47,10 +47,10 @@ $background_image = get_the_post_thumbnail_url($index, 'full') ?: get_field('bac
         default:
     ?>
 
-            <header class="header" style="background-image: url('<?php echo esc_url($background_image); ?>');">
-                <div class="header-inner">
-                    <figure class="w-full h-full bg-gray6 absolute"></figure>
-                    <div class="z-20 flex flex-col items-baseline justify-center">
+            <header class="header overflow-hidden" style="background-image: url('<?php echo esc_url($background_image); ?>');">
+                <div class="header-inner ">
+                    <figure class="w-full h-full bg-gray6 absolute animate-fade"></figure>
+                    <div class="z-20 flex flex-col items-baseline justify-center animate-fade-up">
                         <?php if ($image):
                             echo '<figure class="mx-auto"><img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" /></figure>';
                         else:
@@ -62,7 +62,7 @@ $background_image = get_the_post_thumbnail_url($index, 'full') ?: get_field('bac
                         endif;
                         ?>
                     </div>
-                    <div class="p-lg lg:pr-xxxxl z-20">
+                    <div class="p-lg lg:pr-xxxxl z-20 animate-fade-up">
                         <?php if ($image) echo '<pre>' . $pretitle . '</pre>'; ?>
                         <?php if ($image) echo '<h1>' . $title . '</h1>'; ?>
                         <div><?php echo $resume; ?></div>
