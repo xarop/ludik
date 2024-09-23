@@ -117,7 +117,6 @@ function ludik_nav_menu_add_submenu_class($classes, $args, $depth)
 add_filter('nav_menu_submenu_css_class', 'ludik_nav_menu_add_submenu_class', 10, 3);
 
 
-
 function ludik_time($pretitle = '')
 {
 	$pretitle = $pretitle ? $pretitle : get_the_date();

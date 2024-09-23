@@ -2,19 +2,16 @@
 $index = is_home() ? get_option('page_for_posts') : get_the_ID();
 $type = is_home() ? 'home' : get_post_type();
 
-$pretitle = get_field('pretitle', $index) ? get_field('pretitle', $index) : '';
-$title = get_field('title', $index) ? get_field('title', $index) : get_the_title($index);
-$resume = get_field('resume', $index) ? get_field('resume', $index) : '';
+$pretitle = get_field('pretitle', $index) ?: '';
+$title = get_field('title', $index) ?: get_the_title($index);
+$resume = get_field('resume', $index) ?: '';
 $content = get_post_field('post_content', $index);
 $image = get_field('image', $index);
-$background_image = get_the_post_thumbnail_url($index, 'full');
 
-
-if (!$background_image) {
-    $background_image = get_field('background', 'option');
-}
-
+// Use post thumbnail if available, otherwise fall back to 'background' option field.
+$background_image = get_the_post_thumbnail_url($index, 'full') ?: get_field('background', 'option');
 ?>
+
 
 <?php if (is_front_page()) : ?>
 
