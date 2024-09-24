@@ -27,7 +27,7 @@ $social = get_field('social', 'option');
         <?php endif; ?>
 
 
-        <button aria-label="Toggle navigation" id="primary-menu-toggle" class="hamburger lg:hidden ml-2">
+        <button aria-label="Toggle navigation" id="primary-menu-toggle" class="hamburger lg:hidden ml-4">
             <svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
